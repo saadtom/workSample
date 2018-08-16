@@ -1,0 +1,28 @@
+<div class='round-corners'>
+  <div class="col-md-8 col-md-offset-2">
+    <h2>Weather App </h2>
+    <div class="form-group">
+      <input type="text" #weather="ngModel" [(ngModel)]="id_city" class="form-control" placeholder="Enter City name ..."><br>
+      
+      <div *ngIf="weather.errors && weather.touched">
+      <div [hidden]="!weather.erors.required" class="alert alert-danger">
+        please enter any city
+      </div>
+    </div>
+      <button type="button" class="btn btn-primary" (click)="callWeatherService()">Get Weather</button>
+      <br><br><br> <br>
+      <p class="well lead">
+        <i>City, State, Country :</i> {{ this.city }} {{ this.region }} {{ this.country }} <br>
+        <i> Date:</i>{{this.date}}<br>
+        <i>Temperature :</i> {{ this.temp }} Celsius <i>feels like:</i> {{ this.feel_temp }} Celsius <br>
+        <i>Present Condition :</i> {{ this.pre_condition }} <br>
+        <i>Atmospheric Pressure :</i> {{ this.atm_press }}  <br> 
+        <i>Humidity :</i> {{ this.humidity}} <br>
+        
+      </p>
+      <p id="p1" class="text-info">Total service requests including Weather & Movies is :
+        <span class="badge">{{this._sharedService.total_ReqsMade}}</span>
+      </p>
+    </div>
+  </div>
+</div>

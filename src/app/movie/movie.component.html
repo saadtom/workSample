@@ -1,0 +1,35 @@
+<div class='round-corners'>
+  <h2>Movie Search engine</h2>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <input type="text" #moviename [(ngModel)]="movie" class="form-control" placeholder="Enter any Movie name ...">    <br>
+      <button type="button" class="btn btn-primary" (click)="callMovieService()">Get Movie </button>
+      <br><br><br>
+      <h3>Movie Details</h3> <br>
+
+      <p class="well lead">
+        <i> Title :</i> {{ this.Title }} <br>
+        <i> Plot :</i> {{ this.plot }} <br>
+        <i> Release Date :</i> {{ this.Released }} <br>
+      </p>
+
+      <button type="button" class="btn btn-primary" (click)="MovieDetails()"> Movie  Details</button>
+      <br><br>
+      <p [hidden]="moviename.pristine" class="well lead">
+        <i> Tagline : </i> {{ this.tagline }} <br>
+        <i> Movie Genre :</i> {{ this.genre }} <br>
+        <i> IsAdult :</i> {{ this.adult }} <br>
+        <i> Producers :</i> {{ this.Director }} <br>
+      </p>
+
+      <!--<button type="button" class="btn btn-primary" (click)="SeeImages()"> Show Image</button><br>
+      <p>
+        <img src="http://image.tmdb.org/t/p/w300"  class="img-responsive">
+      </p>-->
+
+      <p id="para1" class="text-info">Total service requests including Weather & Movies is :
+        <span class="badge">{{this._sharedService.total_ReqsMade}}</span>
+      </p>
+    </div>
+  </div>
+</div>

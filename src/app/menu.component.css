@@ -1,0 +1,23 @@
+ul li a{
+    margin-left:-50px;
+    margin-top:10px;
+    padding:15px;
+
+}
+ul li a:nth-child(1){
+    margin-right:50px;
+}
+.link{
+    font-size:30px;
+    color:#C1C8C0;
+    background: #0E615E;
+    border-radius: 25px;
+}
+.nav-pills>li>a:hover{
+    background: #041A1F;
+    color:#C1C8C0;
+}
+.nav-pills>li.active>a{
+    background: #041A1F;
+    color:#C1C8C0;
+}

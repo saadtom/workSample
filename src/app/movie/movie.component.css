@@ -1,0 +1,21 @@
+.round-corners{
+    border-radius: 25px;
+    background: #041A1F;
+    padding: 20px;
+    overflow: hidden;
+}
+h2{
+    color: #C1C8C0;
+    font-weight: bold;
+    text-align: center;
+}
+h3{
+    color: #C1C8C0;
+    font-weight: bold;
+    text-align: center;
+}
+#para1{
+    color:#C1C8C0;
+    font-weight:bolder;
+    font-size:15px;
+}

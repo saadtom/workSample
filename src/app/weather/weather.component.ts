@@ -26,15 +26,10 @@ export class WeatherComponent implements OnInit {
 
   ngOnInit() { }
   callWeatherService() {
-    this._sharedService.findWeather(this.id_city) //this.id_state)
+    this._sharedService.findWeather(this.id_city) 
       .subscribe(
       resultweatherData => {
-        /* this.city = resultweatherData["query"]["results"]["channel"]["location"]["city"];
-         this.region = resultweatherData["query"]["results"]["channel"]["location"]["region"];
-         this.country = resultweatherData["query"]["results"]["channel"]["location"]["country"];
-         this.date = resultweatherData["query"]["results"]["channel"]["item"]["condition"]["date"];
-         this.pre_condition = resultweatherData["query"]["results"]["channel"]["item"]["condition"]["text"];
-         this.temp = resultweatherData["query"]["results"]["channel"]["item"]["condition"]["temp"];*/
+
         this.city = resultweatherData["location"]["name"];
         this.region = resultweatherData["location"]["region"];
         this.country = resultweatherData["location"]["country"];
@@ -47,10 +42,10 @@ export class WeatherComponent implements OnInit {
         this.imageLink=resultweatherData["current"]["condition"]["icon"];
       },
       error => {
+        // Or show an error to the user when the call fails
+        // Right now we are printing the error message in the console
         console.log("Error. The Weather result JSON value is as follows:");
         console.log(error);
       });
   }
 }
-
-

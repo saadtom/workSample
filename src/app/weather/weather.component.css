@@ -14,3 +14,15 @@ h2{
     font-weight:bolder;
     font-size:15px;
 }
+
+.results {
+  font-size:16px;
+  background:#fff;
+  padding: 10px;
+  border-radius: 10px;
+  color: #1da6d0;
+}
+
+.results span {
+  color:#333; 
+}

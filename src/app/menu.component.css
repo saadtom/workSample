@@ -5,19 +5,20 @@ ul li a{
 
 }
 ul li a:nth-child(1){
-    margin-right:50px;
+    margin-right: 67px;
 }
 .link{
     font-size:30px;
-    color:#C1C8C0;
-    background: #0E615E;
-    border-radius: 25px;
+    background: #47b0d0;
+    color:#fff;
+    border-radius: 8px;
 }
-.nav-pills>li>a:hover{
-    background: #041A1F;
-    color:#C1C8C0;
+.link:hover{
+    background: #31859e;
+    color:#fff;
 }
 .nav-pills>li.active>a{
-    background: #041A1F;
-    color:#C1C8C0;
+    background: #23829e;
+    color:#fff;
+    border-radius: 8px;
 }

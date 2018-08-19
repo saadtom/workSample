@@ -18,7 +18,7 @@ export class SharedService {
   // Fetch the data from the url 
   findWeather(city) {
     this.total_ReqsMade = this.total_ReqsMade + 1;
-    return this._http.get(this.weatherURL1 + city  + this.weatherURL2)
+    return this._http.get(this.weatherURL1 + city  + this.weatherURL1)
       .map(response => {
         {
           return response.json()

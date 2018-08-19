@@ -1,11 +1,11 @@
 .round-corners{
     border-radius: 25px;
-    background: #041A1F;
+    background-color:#26b0d0;
     padding: 20px;
     overflow: hidden;
 }
 h2{
-    color: #C1C8C0;
+    color: #dfebef;
     font-weight: bold;
     text-align: center;
 }

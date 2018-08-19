@@ -7,6 +7,7 @@ import { Observable } from "rxjs";
 export class SharedService {
   // Let's define the api url
   weatherURL1="http://api.apixu.com/v1/current.json?key=0e70beed6cfb4e4dbb6153029172608 &q=";
+  weatherURL2 = "";
   movieURL1 = "http://api.themoviedb.org/3/search/movie?api_key=5aa2924101cb102ea40ead255bcadd62&query=";
   movieURL2="http://api.themoviedb.org/3/movie/";
   movieURL3= "?api_key=5aa2924101cb102ea40ead255bcadd62";
@@ -15,10 +16,10 @@ export class SharedService {
 
   constructor(private _http: Http) { }
 
-  // Fetch the data from the url 
+  // Fetch the data from the url
   findWeather(city) {
     this.total_ReqsMade = this.total_ReqsMade + 1;
-    return this._http.get(this.weatherURL1 + city  + this.weatherURL1)
+    return this._http.get(this.weatherURL1 + city  + this.weatherURL2)
       .map(response => {
         {
           return response.json()
